@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Limit</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+    }
+
+    textarea {
+      width: 300px;
+      height: 80px;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Character Limit Example</h2>
+
+  <textarea id="text" oninput="updateCount()" maxlength="100"></textarea>
+
+  <p>
+    Remaining: <span id="remaining">100</span>
+  </p>
+
+  <script>
+    function updateCount() {
+      const text = document.getElementById("text").value.length;
+      const remaining = 100 - text;
+      document.getElementById("remaining").innerText = remaining;
+    }
+  </script>
+
+</body>
+</html>
