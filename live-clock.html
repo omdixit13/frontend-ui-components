@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Clock</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Current Time</h2>
+  <p id="time"></p>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      document.getElementById("time").innerText = timeString;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+</body>
+</html>
 
